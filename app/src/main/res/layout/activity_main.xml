@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="54dp"
-        app:srcCompat="@drawable/logo_small" />
+        app:srcCompat="@drawable/logo_small_blue" />
 
     <EditText
         android:id="@+id/editText"
@@ -26,7 +26,7 @@
         android:layout_height="30dp"
         android:layout_alignStart="@+id/editText2"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="43dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_user"
         android:ems="10"
@@ -72,10 +72,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="26dp"
+        android:shadowColor="#ffffff"
+        android:shadowRadius="3"
         android:text="ANGEL SCHEDULE"
-        android:textColor="#000"
-        android:textSize="28sp"
+        android:textColor="#000536"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="sans" />
 

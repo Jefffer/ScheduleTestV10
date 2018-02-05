@@ -21,6 +21,7 @@
         </activity>
         <activity android:name="ScheduleActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".NotepadActivity"/>
     </application>
 
 </manifest>

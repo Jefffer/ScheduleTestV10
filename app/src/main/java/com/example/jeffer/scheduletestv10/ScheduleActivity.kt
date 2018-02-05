@@ -1,11 +1,15 @@
 package com.example.jeffer.scheduletestv10
 
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.schedule_view.*
+import org.jetbrains.anko.design.snackbar
+import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**
  * Created by Jeffer on 31/01/2018.
@@ -17,8 +21,15 @@ class ScheduleActivity: AppCompatActivity() {
         setContentView(R.layout.schedule_view)
     }
 
+    fun notepadLayout(view: View){
+        startActivity<NotepadActivity>()
+    }
+
+    //lateinit var alerta : AlertDialog
+
     // Método que muestra un alert con la descripción del espacio académico
     fun description(view: View){
+        //snackbar(view, "Hi there!")
         var materia : String = ""
         var salon : String = ""
         var sede : String = ""
@@ -167,22 +178,36 @@ class ScheduleActivity: AppCompatActivity() {
 
 
         // Alert con la descripción de cada espacio academico
-        alert{
+        var alerta = alert{
             title = materia
-            positiveButton("VOLVER"){
-                toast("Horario")
+            positiveButton("NOTAS"){
+                toast("Agregar Notas")
+                notepadLayout(view)
+            }
+            negativeButton("VOLVER"){
+                toast("Tu Horario")
             }
             customView {
                 verticalLayout{
+                    padding = dip(16)
+                    gravity = Gravity.CENTER
                     lparams(width = wrapContent, height = wrapContent)
                     textView("Salón: " + salon)
                     textView("Sede: "+ sede)
                     textView("Docente: " + docente)
-                    button("Agregar Nota")
-                    padding = dip(16)
+                    textView()
+                    themedButton("Agregar Notas", theme = R.style.AppTheme_Button) {
+                        onClick {
+                            notepadLayout(view)
+                        }
+                    }.lparams(width = wrapContent)
+
                 }
             }
         }.show()
+
+
     }
+
 
 }

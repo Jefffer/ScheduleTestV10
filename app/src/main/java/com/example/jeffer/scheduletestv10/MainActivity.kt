@@ -17,9 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     fun newLayout(view: View){
         startActivity<ScheduleActivity>()
-
     }
-
-
 
 }
