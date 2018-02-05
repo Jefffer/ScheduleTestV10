@@ -4,15 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/sheet2" />
+    android:layout_height="match_parent"
+    android:background="@drawable/sheet2">
 
     <EditText
         android:id="@+id/editText_estilo"
@@ -20,12 +13,14 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="42dp"
         android:layout_marginRight="35dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:gravity="top"
         android:hint="Escribe aquí"
-        android:textColor="@color/colorAccent"
-        android:textColorHint="@color/colorHint2" />
+        android:layout_below="@id/notepad_title"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorHint2"
+        android:background="@android:color/transparent"/>
 
     <TextView
         android:id="@+id/notepad_title"
@@ -34,6 +29,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/editText_estilo"
         android:layout_marginTop="21dp"
+        android:layout_marginEnd="25dp"
         android:shadowColor="#ffffff"
         android:shadowRadius="3"
         android:textSize="30sp"

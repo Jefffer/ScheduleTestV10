@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.TextView
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.schedule_view.*
-import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**
@@ -16,13 +15,15 @@ import org.jetbrains.anko.sdk25.coroutines.onClick
  */
 class ScheduleActivity: AppCompatActivity() {
 
+    var materia: String?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.schedule_view)
     }
 
     fun notepadLayout(view: View){
-        startActivity<NotepadActivity>()
+        startActivity<NotepadActivity>("materia" to materia)
     }
 
     //lateinit var alerta : AlertDialog
@@ -30,11 +31,11 @@ class ScheduleActivity: AppCompatActivity() {
     // Método que muestra un alert con la descripción del espacio académico
     fun description(view: View){
         //snackbar(view, "Hi there!")
-        var materia : String = ""
         var salon : String = ""
         var sede : String = ""
         var docente : String = ""
         var view_id = view.getId()
+
 
         // Catedra Francisco Jose - Lunes
         when {
@@ -176,10 +177,9 @@ class ScheduleActivity: AppCompatActivity() {
             }
         }
 
-
         // Alert con la descripción de cada espacio academico
         var alerta = alert{
-            title = materia
+            title = materia!!
             positiveButton("NOTAS"){
                 toast("Agregar Notas")
                 notepadLayout(view)
@@ -199,15 +199,12 @@ class ScheduleActivity: AppCompatActivity() {
                     themedButton("Agregar Notas", theme = R.style.AppTheme_Button) {
                         onClick {
                             notepadLayout(view)
+
                         }
                     }.lparams(width = wrapContent)
 
                 }
             }
         }.show()
-
-
     }
-
-
 }
