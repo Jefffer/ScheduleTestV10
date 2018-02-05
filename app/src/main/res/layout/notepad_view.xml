@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/sheet" />
+        app:srcCompat="@drawable/sheet2" />
 
     <EditText
         android:id="@+id/editText_estilo"
@@ -20,10 +20,25 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="42dp"
         android:layout_marginRight="35dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="65dp"
         android:ems="10"
         android:gravity="top"
         android:hint="Escribe aquí"
-        android:textColor="@android:color/black" />
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorHint2" />
+
+    <TextView
+        android:id="@+id/notepad_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/editText_estilo"
+        android:layout_marginTop="21dp"
+        android:shadowColor="#ffffff"
+        android:shadowRadius="3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:text="TextView" />
 
 </RelativeLayout>
