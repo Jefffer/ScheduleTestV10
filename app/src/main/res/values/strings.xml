@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">ScheduleTestV1.0</string>
+    <string name="app_name">Angel Schedule 2.1</string>
+    <string name="horas8">8:00 &#8212; 10:00</string>
+    <string name="horas10">10:00 &#8212; 12:00</string>
+    <string name="horas12">12:00 &#8212; 2:00</string>
+    <string name="horas2">2:00 &#8212; 4:00</string>
+    <string name="horas4">4:00 &#8212; 6:00</string>
+    <string name="horas6">6:00 &#8212; 8:00</string>
+    <string name="lunes">Lunes</string>
+    <string name="martes">Martes</string>
+    <string name="miercoles">Miércoles</string>
+    <string name="jueves">Jueves</string>
+    <string name="viernes">Viernes</string>
+    <string name="hora">Hora</string>
+    <string name="catedra">Cátedra Francisco José de Caldas</string>
+    <string name="hombre">Hombre Sociedad y Ecología</string>
+    <string name="bases">Bases de Datos Espaciales</string>
+    <string name="geodesia">Geodesia Física</string>
+    <string name="procesos">Procesos Catastrales</string>
+    <string name="avaluos">Avalúos Puntuales</string>
+    <string name="foto">Fotogrametría Digital</string>
+    <string name="orden">Ordenamiento Territorial</string>
+
 </resources>

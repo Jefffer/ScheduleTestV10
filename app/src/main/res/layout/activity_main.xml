@@ -5,30 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/wall_small"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="com.example.jeffer.scheduletestv10.MainActivity">
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        app:srcCompat="@drawable/logo11" />
+        android:layout_marginTop="54dp"
+        app:srcCompat="@drawable/logo_small" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/imageView4"
-        android:layout_marginTop="17dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="55dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_user"
         android:ems="10"
         android:hint="Angélica"
         android:inputType="textPersonName"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorHint"
         android:textSize="16sp" />
 
     <EditText
@@ -37,12 +42,14 @@
         android:layout_height="30dp"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="21dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_name"
         android:ems="10"
-        android:hint="Contraseña..."
+        android:hint="Contraseña"
         android:inputType="textPassword"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorHint"
         android:textSize="16sp" />
 
     <Button
@@ -51,20 +58,25 @@
         android:layout_height="40dp"
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/borde_redondo"
-        android:text="Entrar"
+        android:textAlignment="center"
         android:onClick="newLayout"
+        android:text="Entrar"
         android:textColor="#fff"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/imageView4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="¿Olvidaste la contraseña? Imposible, no hay contraseña" />
+        android:layout_marginTop="31dp"
+        android:text="ANGEL SCHEDULE"
+        android:textColor="#000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
 
 </RelativeLayout>

@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.startActivity
+import android.app.Activity
+import org.jetbrains.anko.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +17,9 @@ class MainActivity : AppCompatActivity() {
 
     fun newLayout(view: View){
         startActivity<ScheduleActivity>()
+
     }
+
+
 
 }
