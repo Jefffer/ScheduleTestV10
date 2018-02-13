@@ -16,6 +16,7 @@ import org.jetbrains.anko.sdk25.coroutines.onClick
 class ScheduleActivity: AppCompatActivity() {
 
     var materia: String?=null
+    var id_vista: Int?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +24,8 @@ class ScheduleActivity: AppCompatActivity() {
     }
 
     fun notepadLayout(view: View){
-        startActivity<NotepadActivity>("materia" to materia)
+        startActivity<NotepadActivity>("materia" to materia, "id_vista" to id_vista)
     }
-
-    //lateinit var alerta : AlertDialog
 
     // Método que muestra un alert con la descripción del espacio académico
     fun description(view: View){
@@ -36,10 +35,10 @@ class ScheduleActivity: AppCompatActivity() {
         var docente : String = ""
         var view_id = view.getId()
 
-
         // Catedra Francisco Jose - Lunes
         when {
              view_id == R.id.textView11 -> {
+                 id_vista = R.id.textView11
                  materia = textView11.text.toString()
                  salon = "Aula 305"
                  sede = "Sabio Caldas"
@@ -50,6 +49,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Procesos Catastrales - Lunes
         when {
             view_id == R.id.textView12 -> {
+                id_vista = R.id.textView12
                 materia = textView12.text.toString()
                 salon = "Aula 308"
                 sede = "Sabio Caldas"
@@ -60,6 +60,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Ordenamiento Territorial - Lunes
         when {
             view_id == R.id.textView13 -> {
+                id_vista = view_id
                 materia = textView13.text.toString()
                 salon = "Aula 206"
                 sede = "Alejandro Suárez Copete"
@@ -70,6 +71,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Bases de Datos - Martes
         when {
             view_id == R.id.textView14 -> {
+                id_vista = view_id
                 materia = textView14.text.toString()
                 salon = "Aula 203"
                 sede = "Calle 34"
@@ -80,6 +82,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Geodesia Fisica - Martes
         when {
             view_id == R.id.textView17 -> {
+                id_vista = view_id
                 materia = textView17.text.toString()
                 salon = "Aula 401"
                 sede = "Sabio Caldas"
@@ -90,6 +93,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Avaluos Puntuales - Martes
         when {
             view_id == R.id.textView18 -> {
+                id_vista = view_id
                 materia = textView18.text.toString()
                 salon = "Aula 302"
                 sede = "Sabio Caldas"
@@ -100,6 +104,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Fotogrametría - Miercoles
         when {
             view_id == R.id.textView20 -> {
+                id_vista = view_id
                 materia = textView20.text.toString()
                 salon = "Aula 311"
                 sede = "Sabio Caldas"
@@ -110,6 +115,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Geodesia Fisica - Miercoles
         when {
             view_id == R.id.textView23 -> {
+                id_vista = view_id
                 materia = textView23.text.toString()
                 salon = "Aula 401"
                 sede = "Sabio Caldas"
@@ -120,6 +126,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Procesos Catastrales - Miercoles
         when {
             view_id == R.id.textView24 -> {
+                id_vista = view_id
                 materia = textView24.text.toString()
                 salon = "Aula 202"
                 sede = "Sabio Caldas"
@@ -130,6 +137,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Ordenamiento Territorial - Miercoles
         when {
             view_id == R.id.textView25 -> {
+                id_vista = view_id
                 materia = textView25.text.toString()
                 salon = "Aula 203"
                 sede = "Alejandro Suárez Copete"
@@ -140,6 +148,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Bases de datos espaciales - Jueves
         when {
             view_id == R.id.textView26 -> {
+                id_vista = view_id
                 materia = textView26.text.toString()
                 salon = "Sala de Informática 701"
                 sede = "Sabio Caldas"
@@ -150,6 +159,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Avaluos puntuales - Jueves
         when {
             view_id == R.id.textView30 -> {
+                id_vista = view_id
                 materia = textView30.text.toString()
                 salon = "Aula 206"
                 sede = "Sabio Caldas"
@@ -160,6 +170,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Fotogrametria - Viernes
         when {
             view_id == R.id.textView32 -> {
+                id_vista = view_id
                 materia = textView32.text.toString()
                 salon = "Lab. Fotogrametría Digital"
                 sede = "Sabio Caldas"
@@ -170,6 +181,7 @@ class ScheduleActivity: AppCompatActivity() {
         // Avaluos puntuales - Jueves
         when {
             view_id == R.id.textView33 -> {
+                id_vista = view_id
                 materia = textView33.text.toString()
                 salon = "Aula 404"
                 sede = "Sabio Caldas"
