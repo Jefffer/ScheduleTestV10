@@ -76,7 +76,7 @@
         android:shadowColor="#ffffff"
         android:shadowRadius="3"
         android:text="ANGEL SCHEDULE"
-        android:textColor="#000536"
+        android:textColor="@color/colorTitle"
         android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="sans" />

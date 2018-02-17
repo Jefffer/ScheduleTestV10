@@ -6,7 +6,6 @@ import android.app.Activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.notepad_view.*
 import org.jetbrains.anko.toast
 import java.io.*
@@ -56,7 +55,7 @@ class NotepadActivity : AppCompatActivity() {
         }
     }
      */
-    
+
     fun save_file(view: View){
         try {
             //val file = OutputStreamWriter(openFileOutput("notas.txt", Activity.MODE_PRIVATE))
@@ -67,9 +66,6 @@ class NotepadActivity : AppCompatActivity() {
         } catch (e: IOException){
         }
         toast("Nota guardada")
-
-
-        //toast(id_vista.toString())
     }
 
 }

@@ -214,6 +214,9 @@ class ScheduleActivity: AppCompatActivity() {
             negativeButton("VOLVER"){
                 toast("Tu Horario")
             }
+            neutralPressed("AGREGAR FECHAS"){
+                toast("Agregar Fechas")
+            }
             customView {
                 verticalLayout{
                     padding = dip(16)
@@ -223,13 +226,12 @@ class ScheduleActivity: AppCompatActivity() {
                     textView("Sede: "+ sede)
                     textView("Docente: " + docente)
                     textView()
-                    themedButton("Agregar Notas", theme = R.style.AppTheme_Button) {
+                    /**themedButton("Agregar Notas", theme = R.style.AppTheme_Button) {
                         onClick {
                             notepadLayout(view)
-
                         }
                     }.lparams(width = wrapContent)
-
+                    */
                 }
             }
         }.show()
