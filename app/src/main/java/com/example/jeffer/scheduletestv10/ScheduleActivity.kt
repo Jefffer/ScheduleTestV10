@@ -17,6 +17,7 @@ class ScheduleActivity: AppCompatActivity() {
 
     var materia: String?=null
     var id_vista: Int?=null
+    var note_name : String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,7 @@ class ScheduleActivity: AppCompatActivity() {
     }
 
     fun notepadLayout(view: View){
-        startActivity<NotepadActivity>("materia" to materia, "id_vista" to id_vista)
+        startActivity<NotepadActivity>("materia" to materia, "id_vista" to id_vista, "note_name" to note_name)
     }
 
     // Método que muestra un alert con la descripción del espacio académico
@@ -43,6 +44,7 @@ class ScheduleActivity: AppCompatActivity() {
                  salon = "Aula 305"
                  sede = "Sabio Caldas"
                  docente = "José Noé Poveda Zafra"
+                 note_name = "Catedra_1"
              }
         }
 
@@ -54,6 +56,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 308"
                 sede = "Sabio Caldas"
                 docente = "René Horacio Torres López"
+                note_name = "Procesos_1"
             }
         }
 
@@ -65,6 +68,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 206"
                 sede = "Alejandro Suárez Copete"
                 docente = "William Eduardo Alfonso Valencia"
+                note_name = "Ordenamiento_1"
             }
         }
 
@@ -76,6 +80,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 203"
                 sede = "Calle 34"
                 docente = "Sandra Yaneth Velazco Florez"
+                note_name = "Bases_1"
             }
         }
 
@@ -87,6 +92,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 401"
                 sede = "Sabio Caldas"
                 docente = "Miguel Antonio Avila Angulo"
+                note_name = "Geodesia_1"
             }
         }
 
@@ -98,6 +104,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 302"
                 sede = "Sabio Caldas"
                 docente = "Edwin Robert Pérez Carvajal"
+                note_name = "Avaluos_1"
             }
         }
 
@@ -109,6 +116,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 311"
                 sede = "Sabio Caldas"
                 docente = "Carlos Leonardo Mendoza"
+                note_name = "Foto_1"
             }
         }
 
@@ -120,6 +128,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 401"
                 sede = "Sabio Caldas"
                 docente = "Miguel Antonio Avila Angulo"
+                note_name = "Geodesia_2"
             }
         }
 
@@ -131,6 +140,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 202"
                 sede = "Sabio Caldas"
                 docente = "René Horacio Torres López"
+                note_name = "Procesos_2"
             }
         }
 
@@ -142,6 +152,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 203"
                 sede = "Alejandro Suárez Copete"
                 docente = "William Eduardo Alfonso Valencia"
+                note_name = "Ordenamiento_2"
             }
         }
 
@@ -153,6 +164,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Sala de Informática 701"
                 sede = "Sabio Caldas"
                 docente = "Sandra Yaneth Velazco Florez"
+                note_name = "Bases_2"
             }
         }
 
@@ -164,6 +176,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 206"
                 sede = "Sabio Caldas"
                 docente = "Edwin Robert Pérez Carvajal"
+                note_name = "Avaluos_2"
             }
         }
 
@@ -175,10 +188,11 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Lab. Fotogrametría Digital"
                 sede = "Sabio Caldas"
                 docente = "Carlos Leonardo Mendoza"
+                note_name = "Foto_2"
             }
         }
 
-        // Avaluos puntuales - Jueves
+        // Hombre sociedad y ecologia - Viernes
         when {
             view_id == R.id.textView33 -> {
                 id_vista = view_id
@@ -186,6 +200,7 @@ class ScheduleActivity: AppCompatActivity() {
                 salon = "Aula 404"
                 sede = "Sabio Caldas"
                 docente = "Luz Helena Camargo Casallas"
+                note_name = "Hombre_1"
             }
         }
 
