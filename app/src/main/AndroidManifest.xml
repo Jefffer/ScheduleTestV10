@@ -21,7 +21,8 @@
         </activity>
         <activity android:name="ScheduleActivity"
             android:screenOrientation="landscape"/>
-        <activity android:name=".NotepadActivity"/>
+        <activity android:name="NotepadActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
     </application>
 
 </manifest>

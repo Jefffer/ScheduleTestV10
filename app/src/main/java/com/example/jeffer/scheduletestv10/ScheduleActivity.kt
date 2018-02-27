@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.TextView
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.schedule_view.*
+import org.jetbrains.anko.design.longSnackbar
+import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**
@@ -205,10 +207,10 @@ class ScheduleActivity: AppCompatActivity() {
         }
 
         // Alert con la descripción de cada espacio academico
-        var alerta = alert{
+        alert{
             title = materia!!
             positiveButton("NOTAS"){
-                toast("Agregar Notas")
+                longToast("Recuerda guardar la Nota")
                 notepadLayout(view)
             }
             negativeButton("VOLVER"){
