@@ -17,7 +17,7 @@
         android:ems="10"
         android:text=""
         android:gravity="top"
-        android:hint="Escribe aquí"
+        android:hint="@string/hint_notepad"
         android:layout_below="@id/notepad_title"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorHint2"
