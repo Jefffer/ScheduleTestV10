@@ -23,6 +23,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name="NotepadActivity"
             android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".DatesActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
     </application>
 
 </manifest>

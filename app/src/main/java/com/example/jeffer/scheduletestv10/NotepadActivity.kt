@@ -17,7 +17,7 @@ import java.lang.StringBuilder
  */
 class NotepadActivity : AppCompatActivity() {
 
-    var id_vista : String ?= null
+    //var id_vista : String ?= null
     var note_name : String ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +26,7 @@ class NotepadActivity : AppCompatActivity() {
         var materia = intent.getStringExtra("materia")
         note_name = intent.getStringExtra("note_name")
         notepad_title.text = materia
-        id_vista = intent.getIntExtra("id_vista", 0).toString()
+        //id_vista = intent.getIntExtra("id_vista", 0).toString()
         //var temporal = editTextNota.setText(id_vista)
 
         if(fileList().contains("notas.txt")){
