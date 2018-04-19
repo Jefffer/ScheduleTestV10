@@ -21,5 +21,6 @@
     <string name="avaluos">Avalúos Puntuales</string>
     <string name="foto">Fotogrametría Digital</string>
     <string name="orden">Ordenamiento Territorial</string>
+    <string name="title_activity_test_view">Test_view</string>
 
 </resources>

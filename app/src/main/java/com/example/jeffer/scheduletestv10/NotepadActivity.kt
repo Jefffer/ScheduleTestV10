@@ -11,6 +11,9 @@ import org.jetbrains.anko.longToast
 //import org.jetbrains.anko.toast
 import java.io.*
 import java.lang.StringBuilder
+import android.widget.RelativeLayout
+
+
 
 /**
  * Created by Jeffer on 4/02/2018.
@@ -47,8 +50,15 @@ class NotepadActivity : AppCompatActivity() {
             }catch (e: IOException){
             }
         }
-
     }
+
+    // Function for let the FAB above the keyboard
+    /*fun fab_up(view: View){
+        var parameter = fab_save_note.getLayoutParams() as RelativeLayout.LayoutParams
+        parameter.setMargins(parameter.leftMargin, parameter.topMargin, parameter.rightMargin, 200) // left, top, right, bottom
+        fab_save_note.setLayoutParams(parameter)
+    }*/
+
 
     /**fun save_file(view: View, db: SQLiteDatabase){
         db.select("Notes", "id", "note").exec {
@@ -57,6 +67,7 @@ class NotepadActivity : AppCompatActivity() {
     }
      */
 
+    // Function for saving the note
     fun save_file(view: View){
         try {
             //val file = OutputStreamWriter(openFileOutput("notas.txt", Activity.MODE_PRIVATE))

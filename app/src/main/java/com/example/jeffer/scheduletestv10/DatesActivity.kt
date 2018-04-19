@@ -9,13 +9,15 @@ import kotlinx.android.synthetic.main.dates_view.*
  */
 class DatesActivity : AppCompatActivity() {
 
+    var materia: String?=null
+    //var date_note_name: String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dates_view)
 
-        var materia = intent.getStringExtra("materia")
-        var date_note_name = intent.getStringExtra("note_name")
+        materia = intent.getStringExtra("materia")
+        //date_note_name = intent.getStringExtra("note_name")
         dates_title.text = materia
 
     }

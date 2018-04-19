@@ -5,7 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sheet3">
+    android:background="@drawable/sheet2">
+
+    <ImageView
+        android:id="@+id/fab_save_note"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="-4dp"
+        android:onClick=""
+        android:clickable="true"
+        android:src="@drawable/save_note_icon" />
 
     <!--<EditText
         android:id="@+id/editTextNota"
@@ -29,14 +42,53 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="42dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="60dp"
         android:shadowColor="#ffffff"
         android:shadowRadius="3"
         android:text="TextView"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="bold" />
+
+    <!--<TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dates_title"
+        android:layout_below="@+id/dates_title"
+        android:layout_marginTop="25dp"
+        android:text="Date_picker"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />-->
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/dates_title"
+        android:id="@+id/date_label">
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha primer parcial"
+            android:inputType="date" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/date_label"
+        android:layout_alignStart="@+id/fab_save_note"
+        android:layout_marginBottom="11dp"
+        app:srcCompat="@drawable/ic_calendar" />
+
 
     <!--<android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
