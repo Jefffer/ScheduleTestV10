@@ -30,6 +30,10 @@ class ScheduleActivity: AppCompatActivity() {
         startActivity<NotepadActivity>("materia" to materia, "id_vista" to id_vista, "note_name" to note_name)
     }
 
+    fun datesLayout(view: View){
+        startActivity<DatesActivity>("materia" to materia, "note_date_name" to note_name)
+    }
+
     // Método que muestra un alert con la descripción del espacio académico
     fun description(view: View){
         //snackbar(view, "Hi there!")
@@ -217,6 +221,7 @@ class ScheduleActivity: AppCompatActivity() {
                 toast("Tu Horario")
             }
             neutralPressed("AGREGAR FECHAS"){
+                datesLayout(view)
                 toast("Agregar Fechas")
             }
             customView {

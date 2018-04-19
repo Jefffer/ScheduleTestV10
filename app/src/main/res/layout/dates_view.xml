@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sheet3">
 
-</android.support.constraint.ConstraintLayout>
+    <!--<EditText
+        android:id="@+id/editTextNota"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text=""
+        android:gravity="top"
+        android:hint="@string/hint_notepad"
+        android:layout_below="@id/notepad_title"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorHint2"
+        android:background="@android:color/transparent"/>-->
+
+    <TextView
+        android:id="@+id/notepad_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="25dp"
+        android:shadowColor="#ffffff"
+        android:shadowRadius="3"
+        android:text="TextView"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="save_file"
+        app:backgroundTint="@color/colorHint3"
+        app:srcCompat="@drawable/logo_small_blue" />
+
+</RelativeLayout>
