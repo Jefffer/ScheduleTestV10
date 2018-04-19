@@ -16,8 +16,6 @@
         android:layout_gravity="right|top"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="-4dp"
-        android:onClick=""
-        android:clickable="true"
         android:src="@drawable/save_note_icon" />
 
     <!--<EditText
@@ -67,26 +65,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginEnd="85dp"
+        android:layout_marginEnd="95dp"
         android:layout_marginTop="25dp"
         android:layout_below="@id/dates_title"
         android:id="@+id/date_label">
 
         <EditText
-            android:id="@+id/input_email"
+            android:id="@+id/date_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha primer parcial"
-            android:inputType="date" />
+            android:inputType="none"
+            android:focusable="false"
+            />
     </android.support.design.widget.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/btn_calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/date_label"
-        android:layout_alignStart="@+id/fab_save_note"
+        android:layout_alignParentEnd="true"
         android:layout_marginBottom="11dp"
+        android:layout_marginEnd="51dp"
+        android:background="@null"
         app:srcCompat="@drawable/ic_calendar" />
 
 
