@@ -4,7 +4,7 @@ import android.app.DatePickerDialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.Button
+//import android.widget.Button
 import android.widget.DatePicker
 import android.widget.ImageButton
 import android.widget.TextView
@@ -12,11 +12,12 @@ import kotlinx.android.synthetic.main.dates_view.*
 import java.text.SimpleDateFormat
 import java.time.Year
 import java.util.*
-import android.R.id.edit
+//import android.R.id.edit
 import android.app.Activity
 import android.content.SharedPreferences
 import android.content.Context.MODE_PRIVATE
-
+import org.jetbrains.anko.toast
+import java.io.IOException
 
 
 /**
@@ -24,11 +25,11 @@ import android.content.Context.MODE_PRIVATE
  */
 class DatesActivity : AppCompatActivity() {
 
-    var materia: String?=null
+    var materia: String? = null
     var button_date : ImageButton ?= null
     var textview_date : TextView ?= null
     var cal = Calendar.getInstance()
-    var selected_date : String ?= null
+    //var selected_date : String ?= null
     //var date_note_name: String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,12 +66,12 @@ class DatesActivity : AppCompatActivity() {
             }
         })
 
-        selected_date = date_input.text.toString()
-
-        val preferences = this.getSharedPreferences("MyPreferences", Activity.MODE_PRIVATE)
-        val editor = preferences.edit()
-        editor.putString("var1", selected_date)
-        editor.apply()
+        try {
+            val preferences = this.getSharedPreferences("MyPreferences", Activity.MODE_PRIVATE)
+            var set_date = preferences.getString(materia,"--/--/----")
+            date_input.setText(set_date)
+        } catch (e: IOException){
+        }
 
     }
 
@@ -78,6 +79,21 @@ class DatesActivity : AppCompatActivity() {
         val myFormat = "dd/MM/yyyy" // format of date
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         textview_date!!.text = sdf.format(cal.getTime())
+    }
+
+    fun save_date(view: View) {
+
+        val date_selected = date_input.text.toString()
+        SystemPreferencesManager.save_date(view, date_selected, materia!!, this)
+        toast("Fechas guardadas")
+        /*try {
+            val preferences = this.getSharedPreferences("MyPreferences", Activity.MODE_PRIVATE)
+            val editor = preferences.edit()
+            editor.putString(materia, selected_date) // save the value of date with the name of "materia"
+            editor.apply()
+        } catch (e: IOException){
+        } */
+
     }
 
 
