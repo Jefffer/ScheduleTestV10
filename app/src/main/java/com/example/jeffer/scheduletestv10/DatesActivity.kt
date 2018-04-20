@@ -12,6 +12,12 @@ import kotlinx.android.synthetic.main.dates_view.*
 import java.text.SimpleDateFormat
 import java.time.Year
 import java.util.*
+import android.R.id.edit
+import android.app.Activity
+import android.content.SharedPreferences
+import android.content.Context.MODE_PRIVATE
+
+
 
 /**
  * Created by Jeffer on 19/04/2018.
@@ -22,6 +28,7 @@ class DatesActivity : AppCompatActivity() {
     var button_date : ImageButton ?= null
     var textview_date : TextView ?= null
     var cal = Calendar.getInstance()
+    var selected_date : String ?= null
     //var date_note_name: String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +65,13 @@ class DatesActivity : AppCompatActivity() {
             }
         })
 
+        selected_date = date_input.text.toString()
+
+        val preferences = this.getSharedPreferences("MyPreferences", Activity.MODE_PRIVATE)
+        val editor = preferences.edit()
+        editor.putString("var1", selected_date)
+        editor.apply()
+
     }
 
     private fun updateDateInView(){
@@ -65,6 +79,8 @@ class DatesActivity : AppCompatActivity() {
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         textview_date!!.text = sdf.format(cal.getTime())
     }
+
+
 
 
 }
