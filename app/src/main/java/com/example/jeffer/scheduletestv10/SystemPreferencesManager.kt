@@ -14,7 +14,7 @@ class SystemPreferencesManager {
 
     companion object {
 
-        fun save_date(view: View,
+        fun saveDate(view: View,
                       selected_date: String,
                       materia: String,
                       context : Context ) {

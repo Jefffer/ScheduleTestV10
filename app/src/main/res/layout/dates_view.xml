@@ -16,7 +16,7 @@
         android:layout_gravity="right|top"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="save_date"
+        android:onClick="saveSelectedDate"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="-4dp"
         android:src="@drawable/save_note_icon" />
@@ -117,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/date_label_2"
         android:layout_alignParentEnd="true"
+        android:clickable="true"
         android:layout_marginBottom="11dp"
         android:layout_marginEnd="51dp"
         android:background="@null"
