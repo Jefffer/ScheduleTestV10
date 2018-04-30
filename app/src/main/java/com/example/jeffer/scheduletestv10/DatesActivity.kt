@@ -37,7 +37,7 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
     var val_name_2 : String ?= null
     var val_name_3 : String ?= null
 
-    var textview_date : TextView ?= null
+    //var textview_date : TextView ?= null
     var cal = Calendar.getInstance()
     //var selected_date : String ?= null
     //var date_note_name: String?=null
@@ -60,25 +60,24 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
         dates_title.text = materia
 
         //get references from layout
-        textview_date = this.date_input
         //var button_date = this.btn_calendar
         //var input_date_1 = date_input
 
         // First date selector
         button_date = this.btn_calendar
-        input_date_1 = date_input
+        input_date_1 = this.date_input
         val_name_1 = materia + "_1"
         // Second date selector
         button_date_2 = this.btn_calendar_2
-        input_date_2 = date_input_2
+        input_date_2 = this.date_input_2
         val_name_2 = materia + "_2"
         // Third date selector
         button_date_3 = this.btn_calendar_3
-        input_date_3 = date_input_3
+        input_date_3 = this.date_input_3
         val_name_3 = materia + "_3"
 
         loadDate()
-
+        //updateDateInView()
 
 
         // Create an OnDateSetListener
@@ -113,16 +112,10 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
     }
 
     fun loadDate(){
-        updateDateInView()
+
         DateListener.dateSetListener(cal, button_date!!, input_date_1!!, val_name_1!!, this)
         DateListener.dateSetListener(cal, button_date_2!!, input_date_2!!, val_name_2!!, this)
         DateListener.dateSetListener(cal, button_date_3!!, input_date_3!!, val_name_3!!, this)
-    }
-
-    private fun updateDateInView(){
-        val myFormat = "dd/MM/yyyy" // format of date
-        val sdf = SimpleDateFormat(myFormat, Locale.US)
-        textview_date!!.text = sdf.format(cal.getTime())
     }
 
     fun save_date(view: View) {
