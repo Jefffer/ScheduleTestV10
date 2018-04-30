@@ -77,7 +77,7 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
         input_date_3 = date_input_3
         val_name_3 = materia + "_3"
 
-        //loadDate()
+        loadDate()
 
 
 
@@ -113,7 +113,7 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
     }
 
     fun loadDate(){
-        //updateDateInView()
+        updateDateInView()
         DateListener.dateSetListener(cal, button_date!!, input_date_1!!, val_name_1!!, this)
         DateListener.dateSetListener(cal, button_date_2!!, input_date_2!!, val_name_2!!, this)
         DateListener.dateSetListener(cal, button_date_3!!, input_date_3!!, val_name_3!!, this)
