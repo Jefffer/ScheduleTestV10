@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:background="@drawable/sheet2">
 
     <ImageView
@@ -120,8 +123,6 @@
             android:id="@+id/qualification_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="true"
-            android:clickable="true"
             android:hint="Nota"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
@@ -169,8 +170,6 @@
             android:id="@+id/qualification_input_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="true"
-            android:clickable="true"
             android:hint="Nota"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
@@ -216,8 +215,6 @@
             android:id="@+id/qualification_input_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="true"
-            android:clickable="true"
             android:hint="Nota"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>

@@ -61,8 +61,16 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
         val_name_3 = materia + "_3"
         qual_name_3 = materia + "_qual_3"
 
+
         loadDate()
         loadQualification()
+        hideKeyboard()
+    }
+
+    private fun hideKeyboard() {
+        HideKeyboard.checkEditTextFocus(this, qualification_input)
+        HideKeyboard.checkEditTextFocus(this, qualification_input_2)
+        HideKeyboard.checkEditTextFocus(this, qualification_input_3)
     }
 
     private fun loadQualification() {
@@ -100,6 +108,8 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
     fun cancel(view: View){
         startActivity<ScheduleActivity>()
     }
+
+
 
 
 
