@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         startActivity<ScheduleActivity>()
     }
 
-    fun hideKeyboard() {
+    private fun hideKeyboard() {
         HideKeyboard.checkEditTextFocus(this, editText)
         HideKeyboard.checkEditTextFocus(this, editText2)
     }

@@ -213,14 +213,14 @@ class ScheduleActivity: AppCompatActivity() {
         // Alert con la descripción de cada espacio academico
         alert{
             title = materia!!
-            positiveButton("NOTAS"){
+            positiveButton("APUNTES"){
                 longToast("Recuerda guardar la Nota")
                 notepadLayout(view)
             }
             negativeButton("VOLVER"){
                 toast("Tu Horario")
             }
-            neutralPressed("AGREGAR FECHAS"){
+            neutralPressed("FECHAS Y NOTAS"){
                 toast("Agregar Fechas")
                 datesLayout(view)
             }

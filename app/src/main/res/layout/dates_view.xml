@@ -27,13 +27,13 @@
         android:layout_height="55dp"
         android:layout_alignTop="@+id/fab_save_date"
         android:layout_toStartOf="@+id/fab_save_date"
-        android:layout_gravity="right|top"
+        android:layout_gravity="end|top"
         android:clickable="true"
         android:layout_marginEnd="-10dp"
         android:elevation="20dp"
         android:focusable="true"
         android:onClick="cancel"
-        android:src="@drawable/cancel_icon" />
+        android:src="@drawable/cancel_icon_darkred" />
 
     <!--<EditText
         android:id="@+id/editTextNota"
@@ -58,11 +58,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/date_label"
         android:layout_marginTop="44dp"
+        android:layout_marginEnd="63dp"
         android:shadowColor="#ffffff"
         android:shadowRadius="3"
-        android:text="TextView"
+        android:text="TextView text text text text"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
+        android:textSize="29sp"
         android:textStyle="bold" />
 
     <!--<TextView
@@ -80,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginEnd="185dp"
         android:layout_marginTop="25dp"
         android:layout_below="@id/dates_title"
         android:id="@+id/date_label">
@@ -98,18 +99,38 @@
         android:id="@+id/btn_calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/date_label"
-        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/date_label_2"
         android:layout_marginBottom="11dp"
-        android:layout_marginEnd="51dp"
+        android:layout_marginEnd="43dp"
+        android:layout_toStartOf="@+id/fab_cancel_note"
         android:background="@null"
         app:srcCompat="@drawable/ic_calendar" />
+
+    <!-- Nota primer parcial -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btn_calendar"
+        android:layout_alignTop="@+id/date_label"
+        android:layout_marginStart="-10dp"
+        android:layout_marginEnd="45dp"
+        android:id="@+id/qualification_1">
+
+        <EditText
+            android:id="@+id/qualification_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:clickable="true"
+            android:hint="Nota"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginEnd="185dp"
         android:layout_marginTop="15dp"
         android:layout_below="@id/date_label"
         android:id="@+id/date_label_2">
@@ -127,19 +148,38 @@
         android:id="@+id/btn_calendar_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/date_label_2"
-        android:layout_alignParentEnd="true"
-        android:clickable="true"
+        android:layout_above="@+id/date_label_3"
         android:layout_marginBottom="11dp"
-        android:layout_marginEnd="51dp"
+        android:layout_marginEnd="43dp"
+        android:layout_toStartOf="@+id/fab_cancel_note"
         android:background="@null"
         app:srcCompat="@drawable/ic_calendar" />
+
+    <!-- Nota segundo parcial -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btn_calendar_2"
+        android:layout_alignTop="@+id/date_label_2"
+        android:layout_marginStart="-10dp"
+        android:layout_marginEnd="45dp"
+        android:id="@+id/qualification_2">
+
+        <EditText
+            android:id="@+id/qualification_input_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:clickable="true"
+            android:hint="Nota"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginEnd="185dp"
         android:layout_marginTop="15dp"
         android:layout_below="@id/date_label_2"
         android:id="@+id/date_label_3">
@@ -157,13 +197,30 @@
         android:id="@+id/btn_calendar_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/date_label_3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="11dp"
-        android:layout_marginEnd="51dp"
+        android:layout_alignStart="@+id/btn_calendar_2"
+        android:layout_alignTop="@+id/date_label_3"
+        android:layout_marginTop="13dp"
         android:background="@null"
         app:srcCompat="@drawable/ic_calendar" />
 
+    <!-- Nota tercer parcial -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/qualification_2"
+        android:layout_alignTop="@+id/date_label_3"
+        android:layout_marginEnd="45dp"
+        android:id="@+id/qualification_3">
+
+        <EditText
+            android:id="@+id/qualification_input_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:clickable="true"
+            android:hint="Nota"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
