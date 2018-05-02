@@ -15,12 +15,27 @@
         android:layout_height="70dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_gravity="right|top"
+        android:layout_gravity="end|top"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="-4dp"
         android:onClick="save_file"
         android:clickable="true"
-        android:src="@drawable/save_note_icon" />
+        android:src="@drawable/save_note_icon"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/fab_cancel_note"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@+id/fab_save_note"
+        android:layout_gravity="end|top"
+        android:layout_toStartOf="@+id/fab_save_note"
+        android:clickable="true"
+        android:elevation="20dp"
+        android:layout_marginEnd="-10dp"
+        android:focusable="true"
+        android:onClick="cancel"
+        android:src="@drawable/cancel_icon" />
 
     <TextView
         android:id="@+id/notepad_title"
@@ -28,28 +43,27 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/editTextNota"
-        android:layout_marginEnd="60dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="63dp"
         android:shadowColor="#ffffff"
         android:shadowRadius="3"
-        android:text="TextView"
+        android:text="TextView test test test test"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
+        android:textSize="29sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextNota"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="38dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="38dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:text=""
         android:gravity="top"
         android:hint="@string/hint_notepad"
         android:layout_below="@id/notepad_title"
-        android:inputType="textCapSentences"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorHint2"
         android:background="@android:color/transparent"/>

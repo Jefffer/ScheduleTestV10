@@ -1,24 +1,25 @@
 package com.example.jeffer.scheduletestv10
 
-import android.app.DatePickerDialog
+//import android.app.DatePickerDialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 //import android.widget.Button
-import android.widget.DatePicker
+//import android.widget.DatePicker
 import android.widget.ImageButton
-import android.widget.TextView
+//import android.widget.TextView
 import kotlinx.android.synthetic.main.dates_view.*
-import java.text.SimpleDateFormat
-import java.time.Year
+//import java.text.SimpleDateFormat
+//import java.time.Year
 import java.util.*
 //import android.R.id.edit
-import android.app.Activity
-import android.content.SharedPreferences
-import android.content.Context.MODE_PRIVATE
+//import android.app.Activity
+//import android.content.SharedPreferences
+//import android.content.Context.MODE_PRIVATE
 import android.widget.EditText
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
-import java.io.IOException
+//import java.io.IOException
 
 
 /**
@@ -81,6 +82,10 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
         SystemPreferencesManager.saveDate(view, date_selected_2, val_name_2!!, this)
         SystemPreferencesManager.saveDate(view, date_selected_3, val_name_3!!, this)
         toast("Fechas guardadas")
+    }
+
+    fun cancel(view: View){
+        startActivity<ScheduleActivity>()
     }
 
     /*override fun date(){

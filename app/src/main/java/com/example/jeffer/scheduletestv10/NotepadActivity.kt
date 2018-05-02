@@ -7,12 +7,11 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.notepad_view.*
-import org.jetbrains.anko.longToast
-//import org.jetbrains.anko.toast
 import java.io.*
 import java.lang.StringBuilder
 import android.widget.RelativeLayout
-
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 
 /**
@@ -77,7 +76,11 @@ class NotepadActivity : AppCompatActivity() {
             file.close()
         } catch (e: IOException){
         }
-        longToast("Nota guardada")
+        toast("Nota guardada")
+    }
+
+    fun cancel(view: View){
+        startActivity<ScheduleActivity>()
     }
 
 }
