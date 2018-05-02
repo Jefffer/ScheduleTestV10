@@ -13,10 +13,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        hideKeyboard()
     }
 
     fun newLayout(view: View){
         startActivity<ScheduleActivity>()
+    }
+
+    fun hideKeyboard() {
+        HideKeyboard.hideSoftKeyboard(this)
     }
 
 }
