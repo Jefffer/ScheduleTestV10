@@ -16,7 +16,7 @@
         android:layout_gravity="right|top"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="saveSelectedDate"
+        android:onClick="saveSelectedData"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="-4dp"
         android:src="@drawable/save_note_icon" />

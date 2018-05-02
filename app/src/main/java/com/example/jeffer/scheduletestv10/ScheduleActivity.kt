@@ -214,14 +214,14 @@ class ScheduleActivity: AppCompatActivity() {
         alert{
             title = materia!!
             positiveButton("APUNTES"){
-                longToast("Recuerda guardar la Nota")
+                longToast("Recuerda guardar tus apuntes")
                 notepadLayout(view)
             }
             negativeButton("VOLVER"){
                 toast("Tu Horario")
             }
             neutralPressed("FECHAS Y NOTAS"){
-                toast("Agregar Fechas")
+                toast("Agregar Fechas y Notas")
                 datesLayout(view)
             }
             customView {
