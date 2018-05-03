@@ -6,7 +6,11 @@
     <color name="colorTitle">#000536</color>
     <!-- <color name="colorAccent">#cb000000</color>-->
     <color name="colorText">#c4dcd8b8</color>
+
     <color name="rareYellow">#fadcb0</color>
+    <color name="red_1">#db0000</color>
+    <color name="red_2">#f44336</color>
+
     <color name="colorHint">#75dcd8b8</color>
     <color name="colorHint2">#7a000536</color>
     <color name="colorHint3">#000536</color>
