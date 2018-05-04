@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sheet2">
+    android:background="@drawable/wall_test_4">
 
 
     <ImageView
@@ -48,7 +48,7 @@
         android:shadowColor="#ffffff"
         android:shadowRadius="3"
         android:text="TextView test test test test"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorTitle"
         android:textSize="29sp"
         android:textStyle="bold" />
 
