@@ -31,11 +31,11 @@ class NotepadActivity : AppCompatActivity() {
         //id_vista = intent.getIntExtra("id_vista", 0).toString()
         //var temporal = editTextNota.setText(id_vista)
 
-        if(fileList().contains("notas.txt")){
+       // if(fileList().contains(note_name)){
             try {
                 //val file = InputStreamReader(openFileInput("notas.txt"))
                 val file = InputStreamReader(openFileInput(note_name))
-                val br = BufferedReader(file)
+                val br = BufferedReader(file as Reader?)
                 var line = br.readLine()
                 val all = StringBuilder()
                 while (line != null){
@@ -48,7 +48,7 @@ class NotepadActivity : AppCompatActivity() {
 
             }catch (e: IOException){
             }
-        }
+        //}
     }
 
     // Function for let the FAB above the keyboard
