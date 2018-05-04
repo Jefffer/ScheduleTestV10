@@ -20,8 +20,15 @@ class SystemPreferencesManager {
                      context : Context ){
             try {
                 val preferences = context.getSharedPreferences("MyPreferences", Activity.MODE_PRIVATE)
-                var set_date = preferences.getString(var_name,"")
-                selected_data.setText(set_date)
+                var editTextID = selected_data.toString().substring(96,101)
+                if (editTextID == "perce") {
+                    var set_date = preferences.getString(var_name, "0")
+                    selected_data.setText(set_date)
+                } else {
+                    var set_date = preferences.getString(var_name, "")
+                    selected_data.setText(set_date)
+                }
+
             } catch (e: IOException){
             }
 

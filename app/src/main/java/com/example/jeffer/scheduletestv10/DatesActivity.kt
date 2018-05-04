@@ -25,12 +25,19 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
     var qualif_input_1 : EditText ?= null
     var qualif_input_2 : EditText ?= null
     var qualif_input_3 : EditText ?= null
+    var perc_input_1 : EditText ?= null
+    var perc_input_2 : EditText ?= null
+    var perc_input_3 : EditText ?= null
     var val_name_1 : String ?= null
     var val_name_2 : String ?= null
     var val_name_3 : String ?= null
     var qual_name_1 : String ?= null
     var qual_name_2 : String ?= null
     var qual_name_3 : String ?= null
+    var perc_name_1 : String ?= null
+    var perc_name_2 : String ?= null
+    var perc_name_3 : String ?= null
+
     var cal = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,25 +51,31 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
         button_date = this.btn_calendar
         input_date_1 = this.date_input
         qualif_input_1 = this.qualification_input
+        perc_input_1 = this.percent_input
         val_name_1 = materia + "_1"
         qual_name_1 = materia + "_qual_1"
+        perc_name_1 = materia + "_per_1"
 
         // Second selector
         button_date_2 = this.btn_calendar_2
         input_date_2 = this.date_input_2
         qualif_input_2 = this.qualification_input_2
+        perc_input_2 = this.percent_input_2
         val_name_2 = materia + "_2"
         qual_name_2 = materia + "_qual_2"
+        perc_name_2 = materia + "_per_2"
 
         // Third selector
         button_date_3 = this.btn_calendar_3
         input_date_3 = this.date_input_3
         qualif_input_3 = this.qualification_input_3
+        perc_input_3 = this.percent_input_3
         val_name_3 = materia + "_3"
         qual_name_3 = materia + "_qual_3"
-
+        perc_name_3 = materia + "_per_3"
 
         loadDate()
+        loadPercentage()
         loadQualification()
         hideKeyboard()
     }
@@ -71,6 +84,15 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
         HideKeyboard.checkEditTextFocus(this, qualification_input)
         HideKeyboard.checkEditTextFocus(this, qualification_input_2)
         HideKeyboard.checkEditTextFocus(this, qualification_input_3)
+        HideKeyboard.checkEditTextFocus(this, percent_input)
+        HideKeyboard.checkEditTextFocus(this, percent_input_2)
+        HideKeyboard.checkEditTextFocus(this, percent_input_3)
+    }
+
+    private fun loadPercentage() {
+        SystemPreferencesManager.loadData(perc_input_1!!, perc_name_1!!, this)
+        SystemPreferencesManager.loadData(perc_input_2!!, perc_name_2!!, this)
+        SystemPreferencesManager.loadData(perc_input_3!!, perc_name_3!!, this)
     }
 
     private fun loadQualification() {
@@ -102,15 +124,15 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
         SystemPreferencesManager.saveData(view, qualif_input_1!!, qual_name_1!!, this)
         SystemPreferencesManager.saveData(view, qualif_input_2!!, qual_name_2!!, this)
         SystemPreferencesManager.saveData(view, qualif_input_3!!, qual_name_3!!, this)
+        SystemPreferencesManager.saveData(view, perc_input_1!!, perc_name_1!!, this)
+        SystemPreferencesManager.saveData(view, perc_input_2!!, perc_name_2!!, this)
+        SystemPreferencesManager.saveData(view, perc_input_3!!, perc_name_3!!, this)
         toast("¡Guardado correctamente!")
     }
 
     fun cancel(view: View){
         startActivity<ScheduleActivity>()
     }
-
-
-
 
 
     /*override fun date(){
