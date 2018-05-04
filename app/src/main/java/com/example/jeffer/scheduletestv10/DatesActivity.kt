@@ -7,6 +7,7 @@ import android.widget.ImageButton
 import kotlinx.android.synthetic.main.dates_view.*
 import java.util.*
 import android.widget.EditText
+import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
@@ -111,13 +112,12 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
 
     // Save selected date from datePicker to the User Preferences
     fun saveSelectedData(view: View) {
+        // Validation if one of the the percentage inputs are empty
+        if (percent_input.text.toString().isEmpty()) perc_input_1!!.setText("0")
+        if (percent_input_2.text.toString().isEmpty()) perc_input_2!!.setText("0")
+        if (percent_input_3.text.toString().isEmpty()) perc_input_3!!.setText("0")
+
         // Call the static saveDate function from SystemPreferencesManager
-        /*val date_selected = input_date_1!!.text.toString()
-        val date_selected_2 = input_date_2!!.text.toString()
-        val date_selected_3 = input_date_3!!.text.toString()
-        val qual_selected_1 = qualif_input_1!!.text.toString()
-        val qual_selected_2 = qualif_input_2!!.text.toString()
-        val qual_selected_3 = qualif_input_3!!.text.toString()*/
         SystemPreferencesManager.saveData(view, input_date_1!!, val_name_1!!, this)
         SystemPreferencesManager.saveData(view, input_date_2!!, val_name_2!!, this)
         SystemPreferencesManager.saveData(view, input_date_3!!, val_name_3!!, this)

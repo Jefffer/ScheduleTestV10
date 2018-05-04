@@ -135,6 +135,7 @@
             android:layout_height="wrap_content"
             android:hint="Porcentaje"
             android:maxLength="2"
+            android:text="0"
             android:inputType="numberDecimal" />
 
     </android.support.design.widget.TextInputLayout>
@@ -205,7 +206,7 @@
             android:layout_height="wrap_content"
             android:hint="Porcentaje"
             android:maxLength="2"
-            android:text=" "
+            android:text="0"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
@@ -271,7 +272,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Porcentaje"
-            android:text=" "
+            android:text="0"
             android:maxLength="2"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
@@ -294,7 +295,7 @@
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
-    
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="70dp"
@@ -307,15 +308,5 @@
         android:focusable="true"
         app:backgroundTint="@color/colorHint3"
         app:srcCompat="@drawable/logo_small_blue" />
-
-    <TextView
-        android:id="@+id/textView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/date_label_3"
-        android:layout_marginTop="70dp"
-        android:layout_toStartOf="@+id/percent_3"
-        android:text="TextView" />
-
 
 </RelativeLayout>
