@@ -38,22 +38,6 @@
         android:onClick="cancel"
         android:src="@drawable/cancel_icon_darkred" />
 
-    <!--<EditText
-        android:id="@+id/editTextNota"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="42dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:text=""
-        android:gravity="top"
-        android:hint="@string/hint_notepad"
-        android:layout_below="@id/notepad_title"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/colorHint2"
-        android:background="@android:color/transparent"/>-->
-
     <TextView
         android:id="@+id/dates_title"
         android:layout_width="wrap_content"
@@ -70,22 +54,47 @@
         android:textSize="29sp"
         android:textStyle="bold" />
 
-    <!--<TextView
-        android:id="@+id/textView19"
+    <!-- Simbolo porcentaje 1 -->
+    <TextView
+        android:id="@+id/percent_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/dates_title"
-        android:layout_below="@+id/dates_title"
-        android:layout_marginTop="25dp"
-        android:text="Date_picker"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp" />-->
+        android:layout_alignBottom="@+id/btn_calendar"
+        android:layout_marginEnd="32dp"
+        android:layout_toStartOf="@+id/qualification_3"
+        android:text="%"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <!-- Simbolo porcentaje 2 -->
+    <TextView
+        android:id="@+id/percent_symbol_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_calendar_2"
+        android:layout_marginEnd="32dp"
+        android:layout_toStartOf="@+id/qualification_3"
+        android:text="%"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <!-- Simbolo porcentaje 3 -->
+    <TextView
+        android:id="@+id/percent_symbol_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_calendar_3"
+        android:layout_marginEnd="32dp"
+        android:layout_toStartOf="@+id/qualification_3"
+        android:text="%"
+        android:textColor="#000"
+        android:textSize="18dp" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginEnd="218dp"
+        android:layout_marginEnd="215dp"
         android:layout_marginTop="25dp"
         android:layout_below="@id/dates_title"
         android:id="@+id/date_label">
@@ -95,7 +104,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="false"
-            android:text="test"
             android:hint="Fecha primer parcial"
             android:inputType="none" />
     </android.support.design.widget.TextInputLayout>
@@ -117,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/btn_calendar"
         android:layout_alignTop="@+id/date_label"
-        android:layout_marginStart="-70dp"
+        android:layout_marginStart="-69dp"
         android:layout_marginEnd="108dp"
         android:id="@+id/percent_1">
 
@@ -125,9 +133,10 @@
             android:id="@+id/percent_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="%"
             android:hint="Porcentaje"
+            android:maxLength="2"
             android:inputType="numberDecimal" />
+
     </android.support.design.widget.TextInputLayout>
 
     <!-- Nota primer parcial -->
@@ -145,14 +154,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nota"
+            android:maxLength="3"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
+
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginEnd="218dp"
+        android:layout_marginEnd="220dp"
         android:layout_marginTop="15dp"
         android:layout_below="@id/date_label"
         android:id="@+id/date_label_2">
@@ -162,6 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="false"
+            android:text="test"
             android:hint="Fecha segundo parcial"
             android:inputType="none" />
     </android.support.design.widget.TextInputLayout>
@@ -183,7 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/btn_calendar_2"
         android:layout_alignTop="@+id/date_label_2"
-        android:layout_marginStart="-70dp"
+        android:layout_marginStart="-69dp"
         android:layout_marginEnd="108dp"
         android:id="@+id/percent_2">
 
@@ -192,7 +204,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Porcentaje"
-            android:text="%"
+            android:maxLength="2"
+            android:text=" "
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
@@ -211,14 +224,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nota"
+            android:maxLength="3"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
+
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginEnd="218dp"
+        android:layout_marginEnd="220dp"
         android:layout_marginTop="15dp"
         android:layout_below="@id/date_label_2"
         android:id="@+id/date_label_3">
@@ -256,7 +271,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Porcentaje"
-            android:text="%"
+            android:text=" "
+            android:maxLength="2"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
@@ -274,9 +290,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nota"
+            android:maxLength="3"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
+    
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="70dp"
@@ -289,5 +307,15 @@
         android:focusable="true"
         app:backgroundTint="@color/colorHint3"
         app:srcCompat="@drawable/logo_small_blue" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_label_3"
+        android:layout_marginTop="70dp"
+        android:layout_toStartOf="@+id/percent_3"
+        android:text="TextView" />
+
 
 </RelativeLayout>
