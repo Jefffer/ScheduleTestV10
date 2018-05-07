@@ -7,7 +7,6 @@ import android.widget.ImageButton
 import kotlinx.android.synthetic.main.dates_view.*
 import java.util.*
 import android.widget.EditText
-import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
@@ -16,30 +15,30 @@ import org.jetbrains.anko.toast
  */
 class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
 
-    var materia: String ?= null
-    var button_date : ImageButton ?= null
-    var button_date_2 : ImageButton ?= null
-    var button_date_3 : ImageButton ?= null
-    var input_date_1 : EditText ?= null
-    var input_date_2 : EditText ?= null
-    var input_date_3 : EditText ?= null
-    var qualif_input_1 : EditText ?= null
-    var qualif_input_2 : EditText ?= null
-    var qualif_input_3 : EditText ?= null
-    var perc_input_1 : EditText ?= null
-    var perc_input_2 : EditText ?= null
-    var perc_input_3 : EditText ?= null
-    var val_name_1 : String ?= null
-    var val_name_2 : String ?= null
-    var val_name_3 : String ?= null
-    var qual_name_1 : String ?= null
-    var qual_name_2 : String ?= null
-    var qual_name_3 : String ?= null
-    var perc_name_1 : String ?= null
-    var perc_name_2 : String ?= null
-    var perc_name_3 : String ?= null
+    private var materia: String ?= null
+    private var button_date : ImageButton ?= null
+    private var button_date_2 : ImageButton ?= null
+    private var button_date_3 : ImageButton ?= null
+    private var input_date_1 : EditText ?= null
+    private var input_date_2 : EditText ?= null
+    private var input_date_3 : EditText ?= null
+    private var qualif_input_1 : EditText ?= null
+    private var qualif_input_2 : EditText ?= null
+    private var qualif_input_3 : EditText ?= null
+    private var perc_input_1 : EditText ?= null
+    private var perc_input_2 : EditText ?= null
+    private var perc_input_3 : EditText ?= null
+    private var val_name_1 : String ?= null
+    private var val_name_2 : String ?= null
+    private var val_name_3 : String ?= null
+    private var qual_name_1 : String ?= null
+    private var qual_name_2 : String ?= null
+    private var qual_name_3 : String ?= null
+    private var perc_name_1 : String ?= null
+    private var perc_name_2 : String ?= null
+    private var perc_name_3 : String ?= null
 
-    var cal = Calendar.getInstance()
+    private var cal = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

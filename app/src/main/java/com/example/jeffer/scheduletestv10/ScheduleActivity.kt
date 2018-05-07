@@ -8,9 +8,6 @@ import android.view.View
 import android.widget.TextView
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.schedule_view.*
-import org.jetbrains.anko.design.longSnackbar
-import org.jetbrains.anko.design.snackbar
-import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**
  * Created by Jeffer on 31/01/2018.
@@ -34,12 +31,11 @@ class ScheduleActivity: AppCompatActivity() {
         startActivity<DatesActivity>("materia" to materia, "note_name" to note_name)
     }
 
-    // Método que muestra un alert con la descripción del espacio académico
+    // Function that shows the matter description in an alert
     fun description(view: View){
-        //snackbar(view, "Hi there!")
-        var salon : String = ""
-        var sede : String = ""
-        var docente : String = ""
+        var salon = ""
+        var sede = ""
+        var docente = ""
         var view_id = view.getId()
 
         // Catedra Francisco Jose - Lunes
@@ -210,11 +206,11 @@ class ScheduleActivity: AppCompatActivity() {
             }
         }
 
-        // Alert con la descripción de cada espacio academico
+        // Alert with the description of each academic space
         alert{
             title = materia!!
             positiveButton("APUNTES"){
-                longToast("Recuerda guardar tus apuntes")
+                toast("Recuerda guardar tus apuntes")
                 notepadLayout(view)
             }
             negativeButton("VOLVER"){
@@ -229,9 +225,9 @@ class ScheduleActivity: AppCompatActivity() {
                     padding = dip(16)
                     gravity = Gravity.CENTER
                     lparams(width = wrapContent, height = wrapContent)
-                    textView("Salón: " + salon)
-                    textView("Sede: "+ sede)
-                    textView("Docente: " + docente)
+                    textView("Salón: $salon")
+                    textView("Sede: $sede")
+                    textView("Docente: $docente")
                     textView()
                     /**themedButton("Agregar Notas", theme = R.style.AppTheme_Button) {
                         onClick {
