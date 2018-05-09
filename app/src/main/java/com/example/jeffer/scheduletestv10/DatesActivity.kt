@@ -9,6 +9,9 @@ import java.util.*
 import android.widget.EditText
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+import android.databinding.DataBindingUtil
+
+
 
 /**
  * Created by Jeffer on 19/04/2018.
