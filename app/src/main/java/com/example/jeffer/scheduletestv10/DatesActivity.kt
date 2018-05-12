@@ -9,8 +9,6 @@ import java.util.*
 import android.widget.EditText
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
-import android.databinding.DataBindingUtil
-
 
 
 /**
@@ -135,10 +133,4 @@ class DatesActivity : AppCompatActivity()/*, DateListener.listener*/ {
     fun cancel(view: View){
         startActivity<ScheduleActivity>()
     }
-
-
-    /*override fun date(){
-        updateDateInView()
-    }*/
-
 }
