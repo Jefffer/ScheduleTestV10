@@ -3,11 +3,9 @@ package com.example.jeffer.scheduletestv10
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Context
-import android.view.View
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.TextView
 import kotlinx.android.synthetic.main.dates_view.*
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -63,8 +61,4 @@ class DateListener {
             date_input.setText(sdf.format(cal.getTime()))
         }
     }
-
-    /*interface listener{
-        fun date()
-    }*/
 }
